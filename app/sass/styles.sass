@@ -25,6 +25,16 @@ body
   perspective: 1000px
   margin-bottom: 20px
 
+  &:hover
+    cursor: pointer
+
+  &.flipped .flip-card-inner
+    transform: rotateY(180deg)
+
+  &.matched
+    opacity: 0
+    visibility: hidden
+
 .flip-card-inner
   position: relative
   text-align: center
@@ -46,12 +56,3 @@ body
 
 .flip-card-back
   transform: rotateY(180deg)
-
-.flip-card
-
-  &.flipped .flip-card-inner
-    transform: rotateY(180deg)
-
-  &.matched
-    opacity: 0
-    visibility: hidden
